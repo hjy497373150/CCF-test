@@ -1,11 +1,11 @@
 #include<cstdio>
 int main(){
-	//商店的数量 
+	//???????? 
 	int n;
 	scanf("%d",&n);
-	//第一天菜价 
+	//??????? 
 	int fir_price[1010];
-	//第二天菜价 
+	//??????? 
 	int sec_price[1010];
 	for(int i = 0;i < n;i++){
 		scanf("%d",&fir_price[i]);
