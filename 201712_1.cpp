@@ -1,5 +1,5 @@
 #include<cstdio>
-#include<cstdlib>
+#include<stdlib.h>
 #include<cmath>
 int main(){
     int n,min,compare;
