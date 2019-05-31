@@ -1,24 +1,27 @@
 #include<cstdio>
-#include<cstdlib>
-#include<cmath>
-int main(){
-    int n,min,compare;
-    int a[1010];
-    scanf("%d",&n);
-    for(int i = 0;i < n;i++){
-        scanf("%d",&a[i]);
-    }
-    min = abs(a[0] - a[1]);
-    for(int i = 0;i < n;i++){
-        for(int k = i+1;k < n;k++){
-        	compare = abs(a[i] - a[k]);
-            if(min >= compare)
-            	min = compare;
-            else
-            	min = min;
-        }
-    }
-    printf("%d",min);
-    printf("\n");
-    return 0;
+int n,v,maxvalue = 0;
+int w[30],c[30];
+void DFS(int index,int sumw,int sumc){
+	if(index == n){
+		if(sumw <= v && sumc > maxvalue){
+			maxvalue = sumc;
+		}
+		return;
+	}
+	DFS(index+1,sumw,sumc);
+	DFS(index+1,sumw+w[index],sumc+c[index]);
 }
+int main(){
+	scanf("%d %d",&n,&v);
+	for(int i = 0;i < n;i++){
+		scanf("%d",&w[i]);
+	}
+	for(int i = 0;i < n;i++){
+		scanf("%d",&c[i]);
+	}
+	DFS(0,0,0);
+	printf("%d",maxvalue);
+	printf("\n");
+	return 0;
+}
+
