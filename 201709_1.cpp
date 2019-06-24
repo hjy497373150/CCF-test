@@ -8,4 +8,5 @@ int main(){
     num = five_n * 7 + three_n * 4 + (N - 50 * five_n - 30 * three_n) / 10;
     printf("%d\n",num);
     return 0;
+    
 }
