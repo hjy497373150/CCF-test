@@ -1,4 +1,4 @@
-//å¿«é€Ÿæ’åº
+//¿ìËÙÅÅĞò
 #include<cstdio>
 using namespace std;
 int partitition(int a[],int left,int right){
