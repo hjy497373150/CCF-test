@@ -1,7 +1,7 @@
 #include<cstdio>
 int main(){
     int N,num;
-    int five_n,three_n;//分别表示�?5瓶�?2瓶，�?3瓶送一瓶的数量
+    int five_n,three_n;
     scanf("%d",&N);
     five_n = N / 50;
     three_n = (N - 50 * five_n) / 30;
