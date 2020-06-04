@@ -1,11 +1,8 @@
-﻿#include<cstdio>
+#include<cstdio>
 int main(){
-	//???????? 
 	int n;
 	scanf("%d",&n);
-	//??????? 
 	int fir_price[1010];
-	//??????? 
 	int sec_price[1010];
 	for(int i = 0;i < n;i++){
 		scanf("%d",&fir_price[i]);

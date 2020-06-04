@@ -1,11 +1,8 @@
 #include<cstdio>
 int main(){
-	//????????? 
 	int r,y,g;
-	//??????????¡¤??????????????????
 	int n;
 	int k,t;
-	//?????
 	long long totaltime = 0;
 	scanf("%d %d %d",&r,&y,&g);
 	int circle = r+y+g;
@@ -19,13 +16,10 @@ int main(){
 				break;
 			case 1:
 				r_flag = totaltime % circle;
-				//???? 
 				if(r_flag <= t)
 					totaltime = totaltime + t - r_flag;
-				//????? 
 				else if(r_flag > t && r_flag <= (t+g))
-					totaltime = totaltime;
-				//????????¦Á?? 
+					totaltime = totaltime; 
 				else if(r_flag > (t+g))
 					totaltime = totaltime + y - r_flag + t + g + r;
 				/*else if(r_flag > (t+g+y))
@@ -33,25 +27,19 @@ int main(){
 				break;
 			case 2:
 				y_flag = totaltime % circle;
-				//???????? 
 				if(y_flag <= (t+r))
 					totaltime = totaltime + t + r - y_flag;
-				//????? 
 				else if(y_flag > (t+r) && y_flag <= (t+r+g))
 					totaltime = totaltime;
-				//????¦Á?? 
 				else if(y_flag > (t+r+g))
 					totaltime = totaltime + y - y_flag + t + g + r + r;
 				break;
 			case 3:
 				g_flag = totaltime % circle;
-				//??????????¦Á??? 
 				if(g_flag <= t || g_flag > (t+y+r))
 					totaltime = totaltime;
-				//???? 
 				else if(g_flag > t && g_flag <= (t+y))
 					totaltime = totaltime + y-(g_flag-t) + r;
-				//???? 
 				else if(g_flag > t+y && g_flag <= (t+y+r))
 					totaltime = totaltime + r-(g_flag-t-y);
 				break;
